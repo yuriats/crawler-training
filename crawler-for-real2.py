@@ -27,8 +27,9 @@ for i in range(3):
 titulo = soup.find_all("div", {"class": "views-field views-field-title"})
 resumo = soup.find_all("div", {"class": "views-field views-field-body"})
 data = soup.find_all("div", {"class": "views-field views-field-field-publication-date"})
-soup_dict =  {'Data': data, 'Título': titulo, 'Resumo': resumo}
 
 for key in range(3):
-    soup_dict =  {Data: data[key].text, 'Título': titulo[key].text, 'Resumo': resumo[key].text}
+    soup_dict =  {'Data': data[key].text, 'Título': titulo[key].text, 'Resumo': resumo[key].text}
     print(key, ':', soup_dict)
+    print()
+    
